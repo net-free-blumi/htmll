@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he-il">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>b-blumi links</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="תמונות/logo1.png" alt="icon">
+
+        <meta name="google-site-verification" content="8qZ1uZLA-Q3GF4Fejqpx7sik9GWaJ_bTVDG63MyPN_k" />
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+        <script>
+                function search(e) {
+                        e.preventDefault()
+                        console.log("click", e);
+
+                        var query = document.getElementById("search-query").value.toLowerCase();
+                        var images = document.getElementsByTagName("img");
+                        var searchResults = [];
+                        var displayedTypes = new Set();
+
+
+                        var searchResultsContainer = document.getElementById("search-results");
+                        // Clear the existing search results
+                        searchResultsContainer.innerHTML = "";
+
+                        if (query.length === 0) {
+                                searchResultsContainer.innerHTML = "נא להזין מילות חיפוש";
+                        } else if (query.length < 3) {
+                                searchResultsContainer.innerHTML = "אנא הכנס לפחות 3 תווים.";
+                        } else {
+                                for (var i = 0; i < images.length; i++) {
+                                        var altText = images[i].getAttribute("alt");
+                                        if (altText !== null && altText.toLowerCase().includes(query)) {
+                                                var link = images[i].parentNode;
+                                                if (link.tagName === "A" && link.classList.contains("searchable-link")) {
+                                                        searchResults.push(link.cloneNode(true));
+                                                }
+                                        }
+                                }
+
+                                if (searchResults.length === 0) {
+                                        searchResultsContainer.innerHTML = "לא נמצאו תוצאות תואמות";
+                                } else {
+                                        for (var j = 0; j < searchResults.length; j++) {
+                                                searchResultsContainer.appendChild(searchResults[j]);
+                                        }
+                                }
+                        }
+
+                        // document.getElementById("search-query").value = ""; // Reset the search query field
+                }
+        </script>
+
+
+
+
+
+        <!-- <script>
+                function search(e) {
+                        e.preventDefault()
+                        console.log("click", e);
+
+                        var query = document.getElementById("search-query").value.toLowerCase();
+                        var images = document.getElementsByTagName("img");
+                        var searchResults = [];
+                        var displayedTypes = new Set();
+
+
+                        var searchResultsContainer = document.getElementById("search-results");
+                        // Clear the existing search results
+                        searchResultsContainer.innerHTML = "";
+
+                        if (query.length === 0) {
+                                searchResultsContainer.innerHTML = "נא להזין מילות חיפוש";
+                        } else if (query.length < 3) {
+                                searchResultsContainer.innerHTML = "אנא הכנס לפחות 3 תווים.";
+                        } else {
+                                for (var i = 0; i < images.length; i++) {
+                                        var altText = images[i].getAttribute("alt");
+                                        if (altText !== null && altText.toLowerCase().includes(query)) {
+                                                var link = images[i].parentNode;
+                                                if (link.tagName === "A" && link.classList.contains("searchable-link")) {
+                                                        searchResults.push(link.cloneNode(true));
+                                                }
+                                        }
+                                }
+
+                                if (searchResults.length === 0) {
+                                        searchResultsContainer.innerHTML = "לא נמצאו תוצאות תואמות";
+                                } else {
+                                        for (var j = 0; j < searchResults.length; j++) {
+                                                searchResultsContainer.appendChild(searchResults[j]);
+                                        }
+                                }
+                        }
+
+                        // document.getElementById("search-query").value = ""; // Reset the search query field
+                }
+        </script> -->
+
+
+
+
+        <!-- 
+oninput="search(event)" -->
+
+
+
+
+
+
+        <div class="container">
+                <header>
+                        <h1>לינקים לאתרים</h1>
+
+                        <button class="button1" onclick="document.body.style.backgroundColor = 'white'"
+                                title=" לחץ עלי לשנות צבע">שנה רקע ללבן</button>
+                        <button class="button2" onclick="document.body.style.backgroundColor =  '#f56767'"
+                                title=" לחץ עלי לשנות צבע">שנה רקע לאדום</button>
+                        <button class="button3" onclick="document.body.style.backgroundColor = '#75d280'"
+                                title="לחץ עלי לשנות צבע ">שנה רקע לירוק</button>
+                        <button class="button4" onclick="document.body.style.backgroundColor = '#00ffff'"
+                                title="לחץ עלי לשנות צבע ">שנה רקע לטורקיז</button>
+                        <button class="button5" onclick="location.reload()" title=" רענון">חזור למצב המקורי</button>
+
+                        <br>
+
+
+                        <div class="search-container">
+
+                                <form onsubmit="search(event)" id='myForm'>
+                                        <input type="text" id="search-query" oninput="search(event)"
+                                                placeholder="חיפוש...">
+                                        <input type="submit" id='submit' value="חפש" onclick="search(event)" />
+
+
+                                </form>
+                        </div>
+
+                        <div id="search-results"></div>
+
+                        <!-- תפריט -->
+                        <br>
+                        <nav>
+                                <ul>
+                                        <h2 id="top">תפריט</h2>
+
+                                        <li><a class="searchable-link" href="#section2">רשות המיסים</a></li>
+                                        <li><a class="searchable-link" href="#section14">מעונות </a></li>
+                                        <li><a class="searchable-link" href="#section3">ביטוח לאומי</a></li>
+                                        <li><a class="searchable-link" href="#section12">משרד הפנים</a></li>
+                                        <li><a class="searchable-link" href="#section4"> הנחות בארנונה ופעולות נוספות
+                                                        לפי עיר </a></li>
+                                        <li><a class="searchable-link" href="#section13">כתובות מיילים</a></li>
+                                        <li><a class="searchable-link" href="#section5"> אתרים כללי </a></li>
+                                        <li><a class="searchable-link" href="#section1"> אתרי גוגל </a></li>
+                                        <li><a class="searchable-link" href="#section6"> אתרי קניות </a></li>
+                                        <li><a class="searchable-link" href="#section7"> אתרי טיסות</a></li>
+                                        <li><a class="searchable-link" href="#section8">אתרי מובייל</a></li>
+                                        <li><a class="searchable-link" href="#section9">מעקב משלוחים</a></li>
+                                        <li><a class="searchable-link" href="#section10">אתרי בנק</a></li>
+                                        <li><a class="searchable-link" href="#section11">אודות ויצירת קשר </a></li>
+
+                                </ul>
+                        </nav>
+                </header>
+
+
+
+                <main>
+
+
+                        <!-- דיב עוטף ליצירת פלק ודיב פרטי לתיחום -->
+
+                        <br>
+                        <H2 id="section2">רשות המיסים </H2>
+                        <div class="b_center">
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href="https://secapp.taxes.gov.il/logon/LogonPoint/tmindex.html"
+                                                target="_blank">
+                                                <img src="תמונות/רשות במיסים.png" title="רשות המיסים"
+                                                        alt="רשות המיסים"></a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href="https://secapp.taxes.gov.il/svMsmkTashlumim/frmTashlumChovot.aspx#nbb "
+                                                target="_blank">
+                                                <img src="תמונות/חדש/88.png" title=" תשלום חובות רשות המיסים "
+                                                        alt="  תשלום חובות רשות המיסים "> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href=" https://secapp.taxes.gov.il/svMsmkTashlumim/frmTashlumShovar.aspx#nbb"
+                                                target="_blank">
+                                                <img src="תמונות/חדש/89.png" title=" תשלום שובר רשות המיסים "
+                                                        alt="  תשלום שובר רשות המיסים "> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href=" https://www.gov.il/he/service/check-status-for-job-grant"
+                                                target="_blank">
+                                                <img src="תמונות/חדש/90.png" title=" בירור מצב טיפול בבקשה למענק עבודה "
+                                                        alt="  בירור מצב טיפול בבקשה למענק עבודה "> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href="https://www.misim.gov.il/gmmhszakaut/BdikatZakaut.aspx "
+                                                target="_blank">
+                                                <img src="תמונות/חדש/91.png" title="בדיקת זכאות למענק עבודה "
+                                                        alt="בדיקת זכאות למענק עבודה "> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href=" https://www.misim.gov.il/empatur/startPageIntErnet.aspx"
+                                                target="_blank">
+                                                <img src="תמונות/חדש/92.png" title="הצהרת עוסק פטור"
+                                                        alt="הצהרת עוסק פטור"> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href="https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx "
+                                                target="_blank">
+                                                <img src="תמונות/חדש/93.png" title="הנפקת אישור ניכוי מס במקור"
+                                                        alt=" הנפקת אישור ניכוי מס במקור"> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href=" https://myvisit.com/#!/home/provider/195" target="_blank">
+                                                <img src="תמונות/חדש/94.png" title=" זימון תור רשות המיסים "
+                                                        alt="זימון תור רשות המיסים  "> </a>
+                                </div>
+
+                                <div class="b_logo"> <a class="searchable-link"
+                                                href=" https://www.gov.il/apps/taxes/taxes/#/shelot-vetshuvot/he?pniyaPopUp=true&pniya=true"
+                                                target="_blank">
+                                                <img src="תמונות/חדש/122.png" title="מפל פניות הציבור רשות המיסים "
+                                                        alt="מפל פניות הציבור רשות המיסים"> </a>
+                                </div>
+
+
+                                <!-- <div class="b_logo"> <a class="searchable-link"  href=" " target="_blank">
+                <img src="תמונות/חדש/100.png" title=" " alt=" "> </a>
+</div>  -->
+
+
+                        </div>
+        </div>
+
+        <br>
+        <H2 id="section14">מעונות</H2>
+        <div class="b_center">
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://apps.moital.gov.il/ClearEligibilityDegree/ " target="_blank">
+                                <img src="תמונות/חדש/95.png" title="ברור קביעת דרגה - מעונות - פריט 306"
+                                        alt="ברור קביעת דרגה - מעונות"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.gov.il/he/service/document_completion_admission_committees_daycare "
+                                target="_blank">
+                                <img src="תמונות/חדש/96.png" title="השלמת מסמכים מעונות ועדת קבלה "
+                                        alt="השלמת מסמכים מעונות ועדת קבלה ">
+                        </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://login.gov.il/nidp/saml2/sso?id=usernamePasswordSMSOtp&sid=0&option=credential&sid=0 "
+                                target="_blank">
+                                <img src="תמונות/חדש/97.png" title=" הגשת בקשה לוועדת קבלה - מעונות"
+                                        alt="הגשת בקשה לוועדת קבלה - מעונות "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/daycare-center-parents-request-degree-of-subsidy"
+                                target="_blank">
+                                <img src="תמונות/חדש/98.png" title="הגשת בקשה לקבלת דרגה משפחתון מעון  "
+                                        alt="הגשת בקשה לקבלת דרגה משפחתון מעון  "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/document_completion_for_request_for_day_care_centers"
+                                target="_blank">
+                                <img src="תמונות/חדש/99.png" title=" השלמת מסמכים למעונות דרגה משרד התמת - פריט 177"
+                                        alt=" השלמת מסמכים למעונות דרגה משרד התמת "> </a>
+                </div>
+
+        </div>
+
+
+
+        <br>
+        <h2 id="section3">ביטוח לאומי</h2>
+        <div class="b_center">
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.btl.gov.il/Pages/default.aspx"
+                                target="_blank">
+                                <img src="תמונות/ביטוח לאומי.png" title="ביטוח לאומי" alt="ביטוח לאומי"></a
+                                class="searchable-link"> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://govforms.gov.il/mw/forms/t355@btl.gov.il"
+                                target="_blank">
+                                <img src="תמונות/חדש/01.png" title="תביעה דמי לידה" alt="תביעה דמי לידה"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/DocumentsGimlaotForm.aspx"
+                                target="_blank">
+                                <img src="תמונות/חדש/02.png" title="תביעה לתשלום גמלה לשמירת הריון"
+                                        alt="תביעה לתשלום גמלה לשמירת הריון"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/BankAllForm.aspx" target="_blank">
+                                <img src="תמונות/חדש/03.png" title="מענק לכל אזרח - ביטוח לאומי "
+                                        alt=" מענק לכל אזרח - ביטוח לאומי "></a> </div>
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://ps.btl.gov.il/#/login" target="_blank">
+                                <img src="תמונות/חדש/04.png" title="הצטרפות להוראת קבע - ביטוח לאומי  "
+                                        alt=" הצטרפות להוראת קבע - ביטוח לאומי "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/HomePage.aspx" target="_blank">
+                                <img src="תמונות/חדש/05.png" title="תשלום חוב - ביטוח לאומי  "
+                                        alt=" תשלום חוב - ביטוח לאומי "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://ps.btl.gov.il/#/QrCode/Registration/user/"
+                                target="_blank">
+                                <img src="תמונות/חדש/06.png" title=" יצירת קוד ביטוח לאומי "
+                                        alt="יצירת קוד ביטוח לאומי "></a>
+
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://govforms.gov.il/mw/forms/T1050@btl.gov.il"
+                                target="_blank">
+                                <img src="תמונות/חדש/07.png" title="רישום נפש ביטוח לאומי לתושבי חול "
+                                        alt="רישום נפש ביטוח לאומי לתושבי חול"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://forms.btl.gov.il/Form/ZStart/ApproveKSM/RUgplIrWj7qp0NazXbaqALr926xXekocDwtqXezSBKXdJjMqDPDpgSoOLE7ExWZ4O19J-nViO0IvgyU9c6W4G6ECre9N3e_DCdpdA8nIR081_"
+                                target="_blank">
+                                <img src="תמונות/חדש/153.png" title=" בקשה לקבלת פרטי שכר ממעסיקך עבור דמי לידה"
+                                        alt="בקשה לקבלת פרטי שכר ממעסיקך עבור דמי לידה"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.gov.il/globaldata/getsequence/gethtmlform.aspx?formType=T1500%40btl.gov.il"
+                                target="_blank">
+                                <img src="תמונות/חדש/08.png" title="תביעה לדמי אבטלה " alt="תביעה לדמי אבטלה "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/BankAllInfo.aspx" target="_blank">
+                                <img src="תמונות/חדש/09.png" title="שינוי פרטי חשבון בנק בביטוח לאומי "
+                                        alt="שינוי פרטי חשבון בנק בביטוח לאומי "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/DocumentsForm.aspx" target="_blank">
+                                <img src="תמונות/חדש/10.png" title=" שליחת מסמכים ללא איזור אישי"
+                                        alt=" שליחת מסמכים ללא איזור אישי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/TochnitChisachonYeledInfo.aspx"
+                                target="_blank">
+                                <img src="תמונות/חדש/11.png" title="בחירת תוכנית חיסכון לכל ילד-פריט 130 "
+                                        alt=" בחירת תוכנית חיסכון לכל ילד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://b2b.btl.gov.il/BTL.ILG.Payments/TochnitChisachonYeledListForm.aspx?fromInfo=637879634640371263"
+                                target="_blank">
+                                <img src="תמונות/חדש/12.png" title=" בדיקה באיזה קופת חיסכון הוא נמצא"
+                                        alt="בדיקה באיזה קופת חיסכון הוא נמצא "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.gov.il/globaldata/getsequence/gethtmlform.aspx?formType=T7821@btl.gov.il "
+                                target="_blank">
+                                <img src="תמונות/חדש/55.png" title="תביעה לגמלה לילד נכה  "
+                                        alt=" תביעה לגמלה לילד נכה "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.btl.gov.il/%D7%98%D7%A4%D7%A1%D7%99%D7%9D%20%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8%D7%99%D7%9D/forms/insurance_forms/Pages/6101%20-%20%20%D7%93%D7%99%D7%9F%20%D7%95%D7%97%D7%A9%D7%91%D7%95%D7%9F%20%D7%A8%D7%91%20%D7%A9%D7%A0%D7%AA%D7%99.aspx"
+                                target="_blank">
+                                <img src="תמונות/חדש/56.png" title=" דין וחשבון רב שנתי (6101)"
+                                        alt="דין וחשבון רב שנתי (6101)"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.btl.gov.il/snifim/Pages/ZimunTor.aspx " target="_blank">
+                                <img src="תמונות/חדש/57.png" title="זימון תור ביטוח לאומי "
+                                        alt=" זימון תור ביטוח לאומי "> </a>
+                </div>
+        </div>
+
+
+        <br>
+        <h2 id="section12"> משרד הפנים</h2>
+        <div class="b_center">
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://login.gov.il/" target="_blank">
+                                <img src="תמונות/הזדהות ממשלתי.png" title="הזדהות ממשלתי" alt="הזדהות ממשלתי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/ddeIw" target="_blank">
+                                <img src="תמונות/משרד הפנים.png" title="משרד הפנים" alt="משרד הפנים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.gov.il/he/service/corona-fines-cancellation-contact-center "
+                                target="_blank">
+                                <img src="תמונות/חדש/101.png" title=" בקשה לביטול דוחות - הפרת תקנות הקורונה"
+                                        alt=" בקשה לביטול דוחות - הפרת תקנות הקורונה"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/ownership-vehicles-transfer" target="_blank">
+                                <img src="תמונות/חדש/102.png" title="העברת בעלות לכלי רכב " alt="העברת בעלות לכלי רכב ">
+                        </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://myvisit.com/#!/home/provider/56"
+                                target="_blank">
+                                <img src="תמונות/חדש/87.png" title="זימון תור משרד הפנים - פריט 88"
+                                        alt="זימון תור משרד הפנים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.gov.il/globalData/GetSequence/gethtmlform.aspx?formtype=mr1a@piba.gov.il "
+                                target="_blank">
+                                <img src="תמונות/חדש/58.png" title="הזמנת ספח חדש לתז - פריט 262"
+                                        alt="הזמנת ספח חדש לתז - פריט 147"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.gov.il/he/service/naming_baby"
+                                target="_blank">
+                                <img src="תמונות/חדש/59.png" title="רישום שם נולד - פריט 2033" alt=" רישום שם נולד"></a>
+                </div>
+
+
+
+                <div class="b_logoo">או לשלוח למייל הזה אישור לידה
+                        <h5>nolad@piba.gov.il </h5>
+                      <button onclick="copyEmail('nolad@piba.gov.il ')">העתק  </button>
+              </div>
+
+
+
+                <!-- <div class="b_logo">
+                        <div>או לשלוח למייל הזה אישור לידה
+                                <h5> nolad@piba.gov.il </h5> <br>
+                        </div>
+                </div> -->
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://govforms.gov.il/mw/forms/PniyaToMeyda@piba.gov.il" target="_blank">
+                                <img src="תמונות/חדש/60.png" title=" הפעלת תז ביומטרי פריט - 148"
+                                        alt=" הפעלת תז ביומטרי"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/BlobFolder/generalpage/services_forms/he/DR11.pdf"
+                                target="_blank">
+                                <img src="תמונות/חדש/61.png" title="דרכון זמני הורדת הטופס "
+                                        alt=" דרכון זמני הורדת הטופס "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://govforms.gov.il/mw/forms/biopassport%40piba.gov.il" target="_blank">
+                                <img src="תמונות/חדש/62.png" title="תשלום על דרכון - פריט 38"
+                                        alt="תשלום על דרכון- פריט 38"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://forms.gov.il/globaldata/getsequence/getHtmlForm.aspx?formtype=mr1@moin.gov.il"
+                                target="_blank">
+                                <img src="תמונות/חדש/63.png" title=" תשלום עבור תעודת זהות שאבדה/נגנבה/הושחתה"
+                                        alt="תשלום עבור תעודת זהות שאבדה/נגנבה/הושחתה"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/schedule_meeting_visas_department" target="_blank">
+                                <img src="תמונות/חדש/64.png" title=" זימון תור במחלקת אשרות - פריט 234"
+                                        alt=" זימון תור במחלקת אשרות"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/application_for_receiving_an_investigation_event_or_information_report"
+                                target="_blank">
+                                <img src="תמונות/חדש/65.png" title="אישור על שריפה ממכבי אש"
+                                        alt="אישור על שריפה ממכבי אש"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://forms.gov.il/globaldata/getsequence/gethtmlform.aspx?formType=mr31bg@moin.gov.il"
+                                target="_blank">
+                                <img src="תמונות/חדש/66.png" title=" בירור פרטים על נוסע - כניסות ויציאות"
+                                        alt="בירור פרטים על נוסע - כניסות ויציאות"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://auth.govforms.gov.il/mw/forms/App4aBirthCertificate@piba.gov.il"
+                                target="_blank">
+                                <img src="תמונות/חדש/67.png" title=" הזמנת תעודת לידה - פריט 144"
+                                        alt=" הזמנת תעודת לידה"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/request_credit_card_refund" target="_blank">
+                                <img src="תמונות/חדש/68.png"
+                                        title=" בקשה להחזר כספי - עבור תשלומים שבוצעו בשירות התשלומים"
+                                        alt=" בקשה להחזר כספי - עבור תשלומים שבוצעו בשירות התשלומים"> </a>
+                </div>
+
+                <!-- <div class="b_logo"> <a class="searchable-link"  href=" " target="_blank">
+                                <img src="תמונות/חדש/100.png" title=" " alt=" "> </a>
+                </div> -->
+
+        </div>
+
+
+
+        <br>
+        <h2 id="section4">הנחות בארנונה ופעולות נוספות לפי עיר</h2>
+        <div class="b_center">
+
+                <h2>עיירית ירושלים</h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.jerusalem.muni.il/he/residents/education/religiouseducation/travel-payment/"
+                                target="_blank">
+                                <img src="תמונות/חדש/14.png" title=" השתתפות בהוצאות נסיעה בחינוך החרדי ירושלים"
+                                        alt=" השתתפות בהוצאות נסיעה בחינוך החרדי ירושלים - פריט 213"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jeronlineforms.jerusalem.muni.il/DirectContactToAssessment?Sub=3"
+                                target="_blank"> <img src="תמונות/חדש/15.png" title="פניות לעיירית ירושלים פריט - 100"
+                                        alt="פניות לעיירית ירושלים בקשר להנחות בארנונה מי שרוצה לערער על הנחה וכו - פריט 249  "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jeronlineforms.jerusalem.muni.il/DirectContactToAssessment?Sub=1"
+                                target="_blank"> <img src="תמונות/חדש/16.png" title="פניות לעיירית ירושלים  פריט - 100"
+                                        alt="פניות לעיירית ירושלים בנושא דירות מגורים כגון שינוי מחזיקים וכו - פריט 249   "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jeronlineforms.jerusalem.muni.il/StandingOrderRequest" target="_blank">
+                                <img src="תמונות/חדש/152.png" title="הצטרפות להוראת קבע - עיריית ירושלים"
+                                        alt="הצטרפות להוראת קבע - עיריית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.jerusalem.muni.il/media/11911/arnona_keva71214.pdf" target="_blank">
+                                <img src="תמונות/חדש/18.png" title="טופס הוראת קבע עיריית ירושלים"
+                                        alt="טופס הוראת קבע עיריית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://greenbook.co.il/card/4397/22701"
+                                target="_blank"> <img src="תמונות/חדש/19.png"
+                                        title="מרכז הגביה הטלפוני של עיריית ירושלים"
+                                        alt="מרכז הגביה הטלפוני של עיריית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jeronlineforms.jerusalem.muni.il/RefundReceiving" target="_blank">
+                                <img src="תמונות/חדש/20.png" title="החזר כספי מעירית ירושלים על ארנונה - פריט 133"
+                                        alt="החזר כספי מעירית ירושלים על ארנונה"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jeronlineforms.jerusalem.muni.il/HoldersExchange" target="_blank">
+                                <img src="תמונות/חדש/21.png" title="שינוי מחזיקים בנכס עירית ירושלים"
+                                        alt="שינוי מחזיקים בנכס עירית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.jerusalem.muni.il/he/residents/parking/parking-reports/parking-appeal/"
+                                target="_blank"> <img src="תמונות/חדש/22.png"
+                                        title="ערעור על דוח חניה עירית ירושלים - פריט 79"
+                                        alt="ערעור על דוח חניה עירית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://pay.jerusalem.muni.il/PaymentsApp/#/"
+                                target="_blank">
+                                <img src="תמונות/חדש/23.png" title="תשלום על דוח חניה בעירית ירושלים"
+                                        alt="תשלום על דוח חניה בעירית ירושלים - פריט 240"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://jeronlineforms.jerusalem.muni.il/Discount"
+                                target="_blank">
+                                <img src="תמונות/חדש/24.png" title="הנחה ארנונה - עיריית ירושלים - פריט 15"
+                                        alt="הנחה ארנונה - עיריית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jeronlineforms.jerusalem.muni.il/FindingAsset" target="_blank">
+                                <img src="תמונות/חדש/25.png" title="איתור מספר חשבון ארנונה ירושלים"
+                                        alt="איתור מספר חשבון ארנונה ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://jerequestatusapi.jerusalem.muni.il/JerSiteStatusApp/#/status/3"
+                                target="_blank">
+                                <img src="תמונות/חדש/26.png" title="סטטוס עיריית ירושלים"
+                                        alt="סטטוס עיריית ירושלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.hagihon.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/%d7%a2%d7%93%d7%9b%d7%95%d7%9f-%d7%a0%d7%a4%d7%a9%d7%95%d7%aa/"
+                                target="_blank">
+                                <img src="תמונות/חדש/103.png" title=" עדכון נפשות הגיחון פריט- 12"
+                                        alt=" עדכון נפשות הגיחון"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.hagihon.co.il/wp-content/uploads/2021/12/tofes-nefhshot-in-heb-1.pdf"
+                                target="_blank">
+                                <img src="תמונות/חדש/104.png" title="טופס ידני עדכון נפשות הגיחון - פריט 13 "
+                                        alt="טופס ידני עדכון נפשות הגיחון  "> </a>
+                </div>
+
+
+
+                <div class="b_logoo">ולשלוח למייל הזה
+                        <h6>nefashot@hagihon.co.ill</h6>
+                      <button onclick="copyEmail('nefashot@hagihon.co.il')">העתק  </button>
+              </div>
+
+
+                <!-- <div class="b_logo">
+                        <div>ולשלוח למייל הזה
+                                <h5>nefashot@hagihon.co.il</h5> <br>
+                        </div>
+                </div> -->
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.hagihon.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/860-2/ "
+                                target="_blank">
+                                <img src="תמונות/חדש/105.png" title=" שינוי מחזיקים חברת המים הגיחון פריט - 12"
+                                        alt=" שינוי מחזיקים חברת המים הגיחון"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.hagihon.co.il/wp-content/uploads/2020/11/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%9E%D7%97%D7%96%D7%99%D7%A7%D7%99%D7%9D-%D7%91%D7%9E%D7%93-%D7%9E%D7%99%D7%9D.pdf"
+                                target="_blank">
+                                <img src="תמונות/חדש/106.png" title="שינוי מחזיקים הגיחון טופס ידני פריט - 12  "
+                                        alt="שינוי מחזיקים הגיחון טופס ידני "> </a>
+                </div>
+
+
+
+                <div class="b_logoo">ולשלוח למייל הזה
+                        <h6>change.name@hagihon.co.il</h6>
+                      <button onclick="copyEmail('change.name@hagihon.co.ill')">העתק  </button>
+              </div>
+
+
+                <!-- <div class="b_logo">
+                        <div>ולשלוח למייל הזה
+                                <h6>change.name@hagihon.co.il</h6> <br>
+                        </div>
+                </div> -->
+
+                <h2>עיריית בית שמש</h2>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.mast.co.il/" target="_blank">
+                                <img src="תמונות/חדש/151.png" title="מאסט" alt="מאסט"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.mast.co.il/29/forms" target="_blank">
+                                <img src="תמונות/חדש/27.png" title="כל הטפסים של עיירית בית שמש"
+                                        alt="כל הטפסים של עיירית בית שמש"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.mast.co.il/39/services "
+                                target="_blank">
+                                <img src="תמונות/חדש/107.png" title="מי שמש מים תאגיד בית שמש  "
+                                        alt=" מי שמש תאגיד מים בית שמש "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.mast.co.il/29/form/ed35e93e-6ef4-4676-bd00-1b89c27715b4?MFTokenId=3d255885-54dc-4edb-9531-decc1f35790c "
+                                target="_blank">
+                                <img src="תמונות/חדש/146.png" title=" החזר כספי עיריית בית שמש פריט - 16 "
+                                        alt=" החזר כספי עיריית בית שמש  "> </a>
+                </div>
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.mast.co.il/PayersReplacment/index?p=a2e85a9a-cc0c-4f53-a0b6-ed8afad3670a&t=2"
+                                target="_blank">
+                                <img src="תמונות/חדש/28.png" title="שינוי מחזיק - עיריית בית שמש"
+                                        alt="שינוי מחזיק - עיריית בית שמש"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.mast.co.il/StatusNetForms/DynamicForm.aspx?prm=ab533b37-a7df-41d6-ba0b-13418df07ba1"
+                                target="_blank">
+                                <img src="תמונות/חדש/29.png" title="הצטרפות להוראת קבע - עיריית בית שמש"
+                                        alt="הצטרפות להוראת קבע - עיריית בית שמש"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://pay24.co.il/ArnonaGeneral/index?p=65aba172-6772-4c59-8e90-03c342892527&MFTokenId=328820b5-b3e0-475c-b264-61e2bd3260ce&isMast=True"
+                                target="_blank">
+                                <img src="תמונות/חדש/145.png" title="הנחה בארנונה  בית שמש - פריט 15"
+                                        alt="הנחה בארנונה בית שמש"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.mast.co.il/PayersReplacment/index?p=a2e85a9a-cc0c-4f53-a0b6-ed8afad3670a&t=2"
+                                target="_blank">
+                                <img src="תמונות/חדש/31.png" title="החלפת משלמים בית שמש"
+                                        alt="החלפת משלמים בית שמש"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.mast.co.il/29/forms" target="_blank">
+                                <img src="תמונות/חדש/32.png" title="אישור טאבו או סילוק חובות לרשם המקרקעין בית שמש"
+                                        alt="אישור טאבו או סילוק חובות לרשם המקרקעין בית שמש"></a> </div>
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.mast.co.il/29/form/1211fbf1-1c87-4986-a892-a2aee5562124 "
+                                target="_blank">
+                                <img src="תמונות/חדש/69.png" title=" בקשה לפטור נכס ריק בית שמש"
+                                        alt=" בקשה לפטור נכס ריק בית שמש"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.mast.co.il/29/form/7348eecc-b0c1-4094-949f-10c27059d7ba?MFTokenId=7ebaf973-22ec-47dd-950f-3874e888cfa5"
+                                target="_blank">
+                                <img src="תמונות/חדש/70.png" title=" השלמת מסמכים ארנונה בית שמש"
+                                        alt=" השלמת מסמכים ארנונה בית שמש"> </a>
+                </div>
+
+                <h2>עיריית בני ברק</h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://city4u.co.il/PortalServicesSite/cityPay/261000?SId=1&LAMASID=261000"
+                                target="_blank">
+                                <img src="תמונות/חדש/33.png" title="תשלום ארנונה עיריית בני ברק  "
+                                        alt="תשלום ארנונה עיריית בני ברק"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/gPqaa" target="_blank">
+                                <img src="תמונות/חדש/34.png" title="אישור טאבו (היעדר חובות) עיירית בני ברק"
+                                        alt="אישור טאבו (היעדר חובות) עיירית בני ברק"></a> </div>
+
+
+
+
+
+                <div class="b_logoo">ולשלוח למייל הזה
+                        <h5>yavetz_m@Bbm.org.il</h5>
+                      <button onclick="copyEmail('yavetz_m@Bbm.org.il')">העתק  </button>
+              </div>
+
+
+              <!-- 
+                <div class="b_logo">
+                        <div>ולשלוח למייל הזה
+                                <h5>yavetz_m@Bbm.org.il</h5> <br>
+                        </div>
+                </div> -->
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/myfIw" target="_blank">
+                                <img src="תמונות/חדש/35.png" title="שינוי מחזיקים עיריית בני ברק פריט - 16"
+                                        alt="שינוי מחזיקים עיריית בני ברק"></a> </div>
+
+
+
+                                        <div class="b_logoo">ולשלוח למייל הזה
+                                                <h5>gviya1@bbm.org.il</h5>
+                                              <button onclick="copyEmail('gviya1@bbm.org.il')">העתק  </button>
+                                      </div>
+
+
+
+                <!-- <div class="b_logo">
+                        <div>ולשלוח למייל הזה
+                                <h5>gviya1@bbm.org.il</h5> <br>
+                        </div>
+                </div> -->
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://por129.cityforms.co.il/ApplicationBuilder/eFormRender.html?code=8148005056A14F7F11DDA7E5D1E338BA&Process=MainProcAssum2023"
+                                target="_blank">
+                                <img src="תמונות/חדש/36.png" title="הנחה בארנונה עיריית בני ברק  - פריט 15 "
+                                        alt="הנחה בארנונה עיריית בני ברק - פריט 15"></a> </div>
+
+                <h2>עיריית אשקלון</h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://forms.mast.co.il/PayersReplacment/index?p=e8d4aba9-6c6b-4ddf-9897-54c3f7fb6e92&MFTokenId=60710493-df59-4c1e-957e-d6adab828bd5"
+                                target="_blank">
+                                <img src="תמונות/חדש/37.png" title="שינוי מחזיקים - עיריית אשקלון מי אשקלון פריט - 16"
+                                        alt="שינוי מחזיקים - עיריית אשקלון מי אשקלון"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://por154.cityforms.co.il/ApplicationBuilder/eFormRender.html?code=A2EA0050568A146811BB299CD5330180&Process=ProcessHok154"
+                                target="_blank">
+                                <img src="תמונות/חדש/38.png" title=" הצטרפות להוראת קבע אשראי - עיריית אשקלון"
+                                        alt=" הצטרפות להוראת קבע אשראי - עיריית אשקלון"></a> </div>
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.mast.co.il/55/form/1ac408cb-322b-4659-8ff8-d06a4111967e"
+                                target="_blank">
+                                <img src="תמונות/חדש/132.png" title=" החזר כספי מי אשקלון  "
+                                        alt=" החזר כספי מי אשקלון "> </a>
+                </div>
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://por154.cityforms.co.il/ApplicationBuilder/eFormRender.html?code=81030050568A4D0111BB33BA9A6234DE&Process=ProcessOneClick&NOSE=2&TAT=2001&SUG=14"
+                                target="_blank">
+                                <img src="תמונות/חדש/133.png" title="החזר כספי עיריית אשקלון  "
+                                        alt=" החזר כספי עיריית אשקלון "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.ashkelon.muni.il/service/Pages/forms.aspx" target="_blank">
+                                <img src="תמונות/חדש/134.png" title=" טפסים עיריית אשקלון  "
+                                        alt=" טפסים עיריית אשקלון "> </a>
+                </div>
+
+
+
+
+                <h2>עיריית קריית גת</h2>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.mast.co.il/37/forms" target="_blank">
+                                <img src="תמונות/חדש/108.png" title="טפסים קריית גת - עירייה"
+                                        alt="טפסים קריית גת - עירייה  "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.mast.co.il/31/forms" target="_blank">
+                                <img src="תמונות/חדש/109.png" title="טפסים מי קריית גת - תאגיד מים "
+                                        alt="טפסים מי קריית גת - תאגיד מים "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.mast.co.il/31/form/c6e4b0e0-8baf-4f86-9c68-8222e573666b?MFTokenId=eae52fc4-0606-44cf-a6d3-53ff25c774e4 "
+                                target="_blank">
+                                <img src="תמונות/חדש/71.png" title="עדכון נפשות מי קריית גת פריט - 12 "
+                                        alt=" עדכון נפשות מי קריית גת "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.mast.co.il/37/form/801fa769-eb95-4865-9761-5d1a834b85ac?MFTokenId=49c07285-fd0f-4e14-acf4-07ea46a85a4b "
+                                target="_blank">
+                                <img src="תמונות/חדש/72.png" title="בקשה להחזר כספי קריית גת  "
+                                        alt="בקשה להחזר כספי קריית גת  "> </a>
+                </div>
+
+
+                <h2> עיריית לוד </h2>
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.mast.co.il/21/form/ab1768f5-22f3-e411-ac30-005056a80560"
+                                target="_blank">
+                                <img src="תמונות/חדש/40.png" title="עדכון נפשות מי לוד" alt="עדכון נפשות מי לוד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://pay24.co.il/ArnonaGeneral/index?p=d0614826-8552-42ee-9986-5d95cf3d5bd0&MFTokenId=5b574680-ceb9-4822-8753-be4c5e07d3d4&isMast=True"
+                                target="_blank">
+                                <img src="תמונות/חדש/41.png" title="בקשת הנחה בארנונה לוד -פריט 15"
+                                        alt="בקשת הנחה בארנונה לוד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.mast.co.il/81/form/eb8990ab-3657-4921-9791-160d193cbd5f?mFTokenID=52ae3e4e-7f7e-4c16-af57-0527df885aff"
+                                target="_blank">
+                                <img src="תמונות/חדש/42.png" title="השלמת מסמכים להנחה בארנונה לוד"
+                                        alt="השלמת מסמכים להנחה בארנונה לוד"></a> </div>
+
+                <h2>עיירית עפולה</h2>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://afula.muni.il/he/358/" target="_blank">
+                                <img src="תמונות/חדש/43.png" title=" עיירית עפולה" alt=" עיירית עפולה"></a> </div>
+
+                <h2>עירית תל אביב </h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www5.tel-aviv.gov.il/TlvFormCollection/TlvArnona/TlvObjectionOfTaxes/Default.aspx"
+                                target="_blank">
+                                <img src="תמונות/חדש/44.png" title="הנחה בארנונה תל אביב - פריט 15"
+                                        alt="הנחה בארנונה - תל אביב"></a>
+                </div>
+
+
+                <h2> עיריית דימונה</h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://por146.cityforms.co.il/appbuilder/forms?code=80DA005056A11C6C1188F64D4B5A7FE9&Process=ResidenceConfirmation"
+                                target="_blank">
+                                <img src="תמונות/חדש/45.png" title="אישור תושבות - עיריית דימונה"
+                                        alt="אישור תושבות - עיריית דימונה"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.dimona.muni.il/uploads/n/1623237056.9315.pdf" target="_blank">
+                                <img src="תמונות/חדש/46.png" title="בקשה לפטור עקב נכס ריק - דימונה"
+                                        alt="בקשה לפטור עקב נכס ריק - דימונה"></a> </div>
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.dimona.muni.il/uploads/n/1610350046.8146.pdf" target="_blank">
+                                <img src="תמונות/חדש/47.png" title="הנחה בארנונה - עיריית דימונה  - פריט 15"
+                                        alt="הנחה בארנונה - עיריית דימונה - פריט 15"></a> </div>
+
+
+                <h2>עיירית ערד</h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://tiktak.metropolinet.co.il/#!form/213334290343448/143" target="_blank">
+                                <img src="תמונות/חדש/48.png" title="הצטרפות הוראת קבע אשראי - עיריית ערד"
+                                        alt="הצטרפות הוראת קבע אשראי - עיריית ערד"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://form.jotform.com/212962062314348"
+                                target="_blank">
+                                <img src="תמונות/חדש/49.png" title="הצטרפות הוראת קבע בנקאי - עיריית ערד"
+                                        alt="הצטרפות הוראת קבע בנקאי - עיריית ערד"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://form.jotform.com/212931728025352"
+                                target="_blank">
+                                <img src="תמונות/חדש/50.png" title="שינוי מחזיקים עירית ערד פריט - 16"
+                                        alt="שינוי מחזיקים עירית ערד"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://tiktak.metropolinet.co.il/#!form/220012382816446/143" target="_blank">
+                                <img src="תמונות/חדש/51.png" title="הנחה בארנונה עירית ערד לפי הכנסה - פריט 15"
+                                        alt="הנחה בארנונה עירית ערד לפי הכנסה - פריט 15"></a> </div>
+
+
+
+
+
+
+
+                                        <div class="b_logoo">ולשלוח למייל הזה
+                                                <h5>gviya@arad.muni.il</h5>
+                                              <button onclick="copyEmail('gviya@arad.muni.il')">העתק  </button>
+                                      </div>
+
+
+<!-- 
+                <div class="b_logo">
+                        <div>ולשלוח למייל הזה
+                                <h5>gviya@arad.muni.il</h5> <br>
+                        </div>
+                </div> -->
+
+                <h2>עיריית אשדוד </h2>
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://tiktak.metropolinet.co.il/#!form/210593403814451/38" target="_blank">
+                                <img src="תמונות/חדש/52.png" title="עדכון פרטי כרטיס אשראי אשדוד"
+                                        alt="עדכון פרטי כרטיס אשראי אשדוד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.ashdod.muni.il/he-il/%D7%90%D7%AA%D7%A8-%D7%94%D7%A2%D7%99%D7%A8/%D7%9E%D7%99%D7%A0%D7%94%D7%9C-%D7%94%D7%9B%D7%A1%D7%A4%D7%99%D7%9D/%D7%90%D7%92%D7%A3-%D7%94%D7%92%D7%91%D7%99%D7%99%D7%94/%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9E%D7%A7%D7%95%D7%95%D7%9F/"
+                                target="_blank">
+                                <img src="תמונות/חדש/53.png" title=" טפסים בשלל נושאים אשדוד"
+                                        alt="טפסים בשלל נושאים אשדוד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://pay24.co.il/ArnonaGeneral/?p=70951ACF-BE18-4150-A36A-6EF29908C53C"
+                                target="_blank">
+                                <img src="תמונות/חדש/54.png" title="הנחה בארנונה אשדוד - פריט 15"
+                                        alt="הנחה בארנונה אשדוד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://digital.ashdod.muni.il/page/TabuAprovement-form" target="_blank">
+                                <img src="תמונות/חדש/135.png" title="אישור היעדר חובות - עיריית אשדוד"
+                                        alt="אישור היעדר חובות - עיריית אשדוד"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://digital.ashdod.muni.il/page/gvia-owner-rent/Gvia-ChangeRentPay-form"
+                                target="_blank">
+                                <img src="תמונות/חדש/136.png" title=" החלפת משלמים אשדוד פריט - 16 "
+                                        alt="החלפת משלמים אשדוד  ">
+                        </a>
+                </div>
+
+                <h2>עיריית טבריה </h2>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.tiberias.muni.il/service/Online_services/Pages/forms.aspx "
+                                target="_blank">
+                                <img src="תמונות/חדש/137.png" title="טפסים עיריית טבריה  " alt=" טפסים עיריית טבריה ">
+                        </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://por151.cityforms.co.il/ApplicationBuilder/eFormRender.html?code=81030050568A4D0111BB33BA9A6234DE&Process=ProcessOneClick"
+                                target="_blank">
+                                <img src="תמונות/חדש/138.png" title=" כללי עיריית טבריה " alt="כללי עיריית טבריה  ">
+                        </a>
+                </div>
+
+                <!-- <div class="b_logo"> <a class="searchable-link" href=" " target="_blank">
+                                <img src="תמונות/חדש/100.png" title=" " alt=" "> </a>
+                </div>-->
+
+
+
+                <h2>עיריית נוף הגליל </h2>
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://nzr.bartech-net.co.il/%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99%D7%9D/%D7%94%D7%A2%D7%91%D7%A8%D7%AA-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA/ "
+                                target="_blank">
+                                <img src="תמונות/חדש/110.png" title="אישור היעדר חובות - עיריית נוף הגליל "
+                                        alt="אישור היעדר חובות - עיריית נוף הגליל "> </a>
+                </div>
+
+
+
+
+                <div class="b_logoo">לשלוח למייל הזה את ההנחה בארנונה
+                        <h5>marinab@nallit.org.i</h5>
+                      <button onclick="copyEmail('marinab@nallit.org.i')">העתק  </button>
+              </div>
+
+
+                
+                <!-- <div class="b_logo">
+                        <div>לשלוח למייל הזה את ההנחה בארנונה
+                                <h5>marinab@nallit.org.il</h5> <br>
+                        </div>
+                </div> -->
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://tiktak.metropolinet.co.il/#!form/200853488611457/93" target="_blank">
+                                <img src="תמונות/חדש/111.png" title="שינויי מחזיקים נוף הגליל פריט - 16"
+                                        alt=" שינויי מחזיקים נוף הגליל"> </a>
+                </div>
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.nof-hagalil.muni.il/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%97%D7%96%D7%99%D7%A7%D7%99%D7%9D-%D7%9C%D7%A6%D7%95%D7%A8%D7%9A-%D7%94%D7%A0%D7%97%D7%94-%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94/"
+                                target="_blank">
+                                <img src="תמונות/חדש/112.png"
+                                        title=" הצהרת מחזיקים לצורך הנחה בארנונה נוף הגליל פריט - 16"
+                                        alt=" הצהרת מחזיקים לצורך הנחה בארנונה נוף הגליל"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.nof-hagalil.muni.il/142-1589718896-%D7%98%D7%A4%D7%A1%D7%99%D7%9D/"
+                                target="_blank">
+                                <img src="תמונות/חדש/113.png" title=" טפסים עיריית נוף הגליל"
+                                        alt="טפסים עיריית נוף הגליל"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://tiktak.metropolinet.co.il/#!/page/343"
+                                target="_blank">
+                                <img src="תמונות/חדש/139.png" title=" טפסים שונים עיריית נוף הגליל"
+                                        alt="טפסים שונים עיריית נוף הגליל"> </a>
+                </div>
+
+
+        </div>
+
+
+
+
+
+
+        <br>
+        <h2 id="section5">כללי</h2>
+        <div class="b_center">
+
+                <!-- 
+                <div class="b_logo"> <a class="searchable-link"  href=" " target="_blank">
+                                <img src="תמונות/חדש/100.png" title=" " alt=" "> </a>
+                </div> -->
+
+                <!-- <div class="b_logo"> <a class="searchable-link"  href=" " target="_blank">
+                                <img src="תמונות/חדש/100.png" title=" " alt=" "> </a>
+                </div>  -->
+
+
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://avepdf.com/he/compress-pdf "
+                                target="_blank">
+                                <img src="תמונות/חדש/140.png" title=" דוחס מסמך PDF בצורה טובה "
+                                        alt="דוחס מסמך PDF בצורה טובה  "> </a>
+                </div>
+
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/Departments/General/myvisit" target="_blank">
+                                <img src="תמונות/חדש/116.png" title="זימון תור במשרד התחבורה פריט - 90  "
+                                        alt=" זימון תור במשרד התחבורה "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://shikum.sheba.co.il/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9E%D7%A8%D7%A4%D7%90%D7%AA_%D7%A7%D7%A9%D7%AA_%D7%A8%D7%90%D7%A9%D7%99 "
+                                target="_blank">
+                                <img src="תמונות/חדש/117.png" title=" מרפאת קשת – מבוגרים בספקטרום האוטיסטי"
+                                        alt="מרפאת קשת – מבוגרים בספקטרום האוטיסטי"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="http://www.bait1.co.il/html5/?_id=13748&did=1322&G=13748 " target="_blank">
+                                <img src="תמונות/חדש/118.png" title="בית אחד תל אביב" alt=" בית אחד תל אביב"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.variety.co.il/" target="_blank">
+                                <img src="תמונות/חדש/119.png" title=" וראייטי ישראל  " alt="וראייטי ישראל  "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.gov.il/he/service/common_house_files"
+                                target="_blank">
+                                <img src="תמונות/חדש/120.png" title=" הזמנת מסמכי בית משותף"
+                                        alt="הזמנת מסמכי בית משותף"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://ecom.gov.il/voucherspa/input/440 "
+                                target="_blank">
+                                <img src="תמונות/חדש/121.png" title="  הזמנת נסח טאבו פריט 44"
+                                        alt="  הזמנת נסח טאבו - פריט 44"> </a>
+                </div>
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.iec.co.il/tenant " target="_blank">
+                                <img src="תמונות/חדש/123.png" title="שינוי מחזיקים - חברת חשמל "
+                                        alt=" שינוי מחזיקים - חברת חשמל "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.iec.co.il/interaction-form"
+                                target="_blank">
+                                <img src="תמונות/חדש/124.png" title="פנייה לשירות הלקוחות חברת חשמל "
+                                        alt="פנייה לשירות הלקוחות חברת חשמל "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://digitalorders.iec.co.il/home"
+                                target="_blank">
+                                <img src="תמונות/חדש/125.png" title="הגדלת חיבור חברת חשמל "
+                                        alt=" הגדלת חיבור חברת חשמל "> </a>
+                </div>
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.dira.moch.gov.il/" target="_blank">
+                                <img src="תמונות/מחיר_למשתכן.png" title="הגרלה מחיר למשתכן - פריט 2299"
+                                        alt="הגרלה מחיר למשתכן"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.gov.il/he/service/request_for_eligibility_confirmation"
+                                target="_blank">
+                                <img src="תמונות/חדש/74.png" title=" יצירת זכאות מחיר למשתכן"
+                                        alt=" יצירת זכאות מחיר למשתכן"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://alonim-mgar.co.il/f1.aspx?l=0"
+                                target="_blank">
+                                <img src="תמונות/חדש/127.png" title=" חידוש לסיוע בשכר דירה אלונים - פריט 171"
+                                        alt=" חידוש לסיוע בשכר דירה אלונים"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://shikun.milgam.co.il/%D7%9E%D7%99%D7%9C%D7%92%D7%9D-%D7%A1%D7%99%D7%95%D7%A2-%D7%91%D7%A9%D7%9B%D7%A8-%D7%93%D7%99%D7%A8%D7%94/"
+                                target="_blank">
+                                <img src="תמונות/חדש/128.png" title=" מילגם סיוע בשכר דירה" alt="מילגם סיוע בשכר דירה">
+                        </a>
+                </div>
+
+                <div class="b_logo"><a class="searchable-link" href="https://www.szmc.org.il/heb/birth-registration/"
+                                target="_blank">
+                                <img src="תמונות/חדש/150.png" title="טופס רישום מוקדם ללידה שערי צדק"
+                                        alt="טופס רישום מוקדם ללידה שערי צדק"></a>
+                </div>
+
+
+
+                <div class="b_logoo">ולשלוח למייל הזה
+                        <h5>leida@szmc.org.il</h5>
+                      <button onclick="copyEmail('leida@szmc.org.il ')">העתק  </button>
+              </div>
+
+
+
+                <!-- <div class="b_logo">
+                        <div>ולשלוח למייל הזה
+                                <h4>leida@szmc.org.il</h4> <br>
+                        </div>
+                </div> -->
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.hadassah.org.il/labor_page/"
+                                target="_blank">
+                                <img src="תמונות/חדש/76.png" title=" הרשמה ללידה הדסה הר הצופים"
+                                        alt="הרשמה ללידה הדסה הר הצופים "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://prodapps.egged.co.il/fines-app/ "
+                                target="_blank">
+                                <img src="תמונות/חדש/77.png" title=" תשלום דוח אגד" alt=" תשלום דוח אגד"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://meron.tickchak.co.il/ " target="_blank">
+                                <img src="תמונות/חדש/79.png" title=" טיקצאק זימון כרטיס למירון "
+                                        alt=" טיקצאק זימון כרטיס למירון  "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.histadrut.org.il/aid/dist/index.html"
+                                target="_blank">
+                                <img src="תמונות/חדש/80.png" title=" הגשת טופס בקשה לקרן סיוע"
+                                        alt="הגשת טופס בקשה לקרן סיוע"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://tagim2.polimil.com/PicUpload/Home "
+                                target="_blank">
+                                <img src="תמונות/חדש/81.png" title="העלאת תמונה עבור כרטיס / תעודה / רישיון"
+                                        alt="העלאת תמונה עבור כרטיס / תעודה / רישיון "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.hadassah.org.il/contactushadassahmedicalrecords/ " target="_blank">
+                                <img src="תמונות/חדש/83.png" title=" הדסה בקשה לקבלת מסמכים רפואיים"
+                                        alt=" הדסה בקשה לקבלת מסמכים רפואיים"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://kereni.co.il/ " target="_blank">
+                                <img src="תמונות/חדש/84.png" title="עגור קרן השתלמות למורים  "
+                                        alt="עגור קרן השתלמות למורים "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"  href="https://www.taasuka.gov.il/he " target="_blank">
+                        <img src="תמונות/חדש/157.png" title=" שירות התעסוקה " alt=" שירות התעסוקה  "> </a>
+        </div> 
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.kranoth.org.il/contact/"
+                                target="_blank">
+                                <img src="תמונות/חדש/78.png" title="קרן השתלמות לעובדי הוראה  "
+                                        alt="קרן השתלמות לעובדי הוראה  "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://apps.education.gov.il/TikNet/index.html#/ShowTofesSheelonMuamad "
+                                target="_blank">
+                                <img src="תמונות/חדש/141.png" title="פתיחת תיק פורטל עובדי הוראה  משרד החינוך  "
+                                        alt="פתיחת תיק פורטל עובדי הוראה משרד החינוך  "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://poh.education.gov.il/Pages/HomePage.aspx "
+                                target="_blank">
+                                <img src="תמונות/חדש/131.png" title="פורטל עובדי הוראה משרד החינוך"
+                                        alt="פורטל עובדי הוראה משרד החינוך"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://hrm-ob.malam-payroll.com/hrm/ob-emp?1 "
+                                target="_blank">
+                                <img src="תמונות/חדש/115.png" title=" HRM מערכת מלם שכר" alt="HRM מערכת מלם שכר"> </a>
+                </div>
+                <div class="b_logo"> <a class="searchable-link" href=" https://meravdigital.co.il/" target="_blank">
+                                <img src="תמונות/חדש/144.png" title="מירב דיגיטל עדכון פרטי עובד  "
+                                        alt=" מירב דיגיטל עדכון פרטי עובד "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://tlush.malam-payroll.com/tlush/login;TLUSH_JSESSIONID=lLtIOu4R0uzzpIjrLFj16WBr57zQeU7ETIajcOGJEsH81Hzsv9XF!686663283?0"
+                                target="_blank">
+                                <img src="תמונות/חדש/126.png" title=" מלם שכר תלושים" alt=" מלם שכר תלושים"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://rt-pay.com/WebRP/Default.aspx?lng=he-IL "
+                                target="_blank">
+                                <img src="תמונות/חדש/142.png" title=" עדכון שעות נוכחות חברת זמן אמת"
+                                        alt=" עדכון שעות נוכחות חברת זמן אמת"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://my.tripletech.co.il/employee_users/sign_in " target="_blank">
+                                <img src="תמונות/חדש/82.png" title="טריפל טאק מערכת לניהול עובדים"
+                                        alt="טריפל טאק מערכת לניהול עובדים   "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://lavy.real-board.com/#/" target="_blank">
+                                <img src="תמונות/חדש/130.png" title="דיווח שעות נוכחות פורטל לביא"
+                                        alt=" דיווח שעות נוכחות פורטל לביא"> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://defi.co.il/#/map" target="_blank">
+                                <img src="תמונות/חדש/156.png" title="איפה דפי" alt="איפה דפי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.jumbomail.me/he/" target="_blank">
+                                <img src="תמונות/חדש/154.png" title="ג'מבו מייל - פריט 59" alt="ג'מבו מייל"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/" target="_blank">
+                                <img src="תמונות/חדש/155.png" title="קיצור לינקים" alt="קיצור לינקים"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://netfree.link/" target="_blank">
+                                <img src="תמונות/נט פרי.png" title="נטפרי" alt="נטפרי"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://did.li/P2ACN" target="_blank">
+                                <img src="תמונות/ויקיפדיה.png" title="המכלול" alt="המכלול"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://zoom.us/" target="_blank">
+                                <img src="תמונות/זום.png" title="זום" alt="זום"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://ravkavonline.co.il/he/" target="_blank">
+                                <img src="תמונות/רב קו.png" title="רב קו" alt="רב קו"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://mitmachim.top/" target="_blank">
+                                <img src="תמונות/מתמכים טופ.png" title="מתמחים טופ" alt="מתמחים טופ"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/0ceIw" target="_blank">
+                                <img src="תמונות/לוח שנה.png" title="לוח שנה" alt="לוח שנה"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="http://192.168.0.1/#" target="_blank">
+                                <img src="תמונות/סטיק.png" title="נטסטיק" alt="נטסטיק"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.call2all.co.il/ym/index.php"
+                                target="_blank">
+                                <img src="תמונות/ימות המשיח.png" title="ניהול מערכת טלפוני"
+                                        alt="ניהול מערכת טלפוני ימות"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/6tpaa" target="_blank">
+                                <img src="תמונות/פרוג.png" title="פרוג הקורס שלנו" alt="פרוג הקורס שלנו"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://geektyper.com/mobile/" target="_blank">
+                                <img src="תמונות/אתר מפחיד.png" title="אתר מפחיד" alt="אתר מפחיד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.speedtest.net/result/9325956128"
+                                target="_blank">
+                                <img src="תמונות/בדיקת מהירות.png" title="בדיקת מהירות גלישה"
+                                        alt="בדיקת מהירות גלישה"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.waze.com/he/live-map/"
+                                target="_blank">
+                                <img src="תמונות/וויז.png" title="וויז" alt="וויז"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.matara.pro/nedarimplus/"
+                                target="_blank">
+                                <img src="תמונות/נדרים פלוס.png" title="נדרים פלוס" alt="נדרים פלוס "></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://kehilot.info/" target="_blank">
+                                <img src="תמונות/קהילות.png" title="קהילות" alt="קהילות"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://metchy.com/" target="_blank">
+                                <img src="תמונות/מצי תרומות.png" title="מצי קמפיינים" alt="תרומות מצי"></a>
+                </div>
+
+
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/4c4fT" target="_blank">
+                                <img src="תמונות/המרה_מעברי_ללאוזי.png" title="לוח שנה המרה" alt="לוח שנה המרה"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://web.attractinet.co.il/JerusalemZoo/?jumpTo=Purches" target="_blank">
+                                <img src="תמונות/גן חיות תנכי.png" title="גן חיות תנכי" alt="גן חיות תנכי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.kavod.org.il/form/#/" target="_blank">
+                                <img src="תמונות/מלבושי כבוד.png" title="מלבושי כבוד - פריט 328" alt="מלבושי כבוד"></a>
+                </div>
+
+
+        </div>
+
+
+
+
+        <h2 id="section1">אתרי גוגל</h2>
+        <div class="b_center">
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.google.co.il/maps/?hl=iw"
+                                target="_blank">
+                                <img src="תמונות/גוגל מפות.png" alt="גוגל מפות" title="גוגל מפות"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://mail.google.com/mail/u/0/#inbox"
+                                target="_blank">
+                                <img src="תמונות/גימייל.png" alt="גימייל" title="גימייל"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://drive.google.com/drive/my-drive"
+                                target="_blank">
+                                <img src="תמונות/דרייב.png" alt="גוגל דרייב" title="גוגל דרייב"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://translate.google.co.il/?hl=iw"
+                                target="_blank">
+                                <img src="תמונות/תרגום גוגל.png" alt="תרגום גוגל" title="תרגום גוגל"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.google.com/" target="_blank">
+                                <img src="תמונות/גוגל.png" alt="גוגל" title="גוגל"></a> </div>
+        </div>
+
+
+
+        <br>
+        <h2 id="section6">אתרי קניות</h2>
+        <div class="b_center">
+                <div class="b_logo"> <a class="searchable-link" href="https://www.ebay.com/" target="_blank">
+                                <img src="תמונות/לוגו איביי.png" title="איביי" alt="איביי"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/BQjrl" target="_blank">
+                                <img src="תמונות/אלי אקספרס.png" title="אלי אקספרס" alt="אלי אקספרס"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.ikea.com/il/he/" target="_blank">
+                                <img src="תמונות/איקאה.png" title="איקאה" alt="איקאה"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://il.shein.com/?lang=il" target="_blank">
+                                <img src="תמונות/שיין.png" title="שיין" alt="שיין"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.zap.co.il/" target="_blank">
+                                <img src="תמונות/זאפ.png" title=" זאפ" alt=" זאפ"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="http://www.amazon.com/" target="_blank">
+                                <img src="תמונות/אמזון.png" title="אמזון" alt="אמזון"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="http://il.nextdirect.com/iw/" target="_blank">
+                                <img src="תמונות/נקסט.png" title="נקסט" alt="נקסט"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.yad2.co.il/" target="_blank">
+                                <img src="תמונות/יד 2.png" title="יד 2" alt="יד 2"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://cashdo.co.il/?ref=2wBQNF" target="_blank">
+                                <img src="תמונות/קאשדו.png" title="קאשדו" alt="קאשדו"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.ivory.co.il/" target="_blank">
+                                <img src="תמונות/אייבורי.png " title="אייבורי" alt="אייבורי"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.zipy.co.il/" target="_blank">
+                                <img src="תמונות/זיפי.png " title="זייפי" alt="זיפי"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://ksp.co.il/" target="_blank">
+                                <img src="תמונות/קי אס פי.png " title="KSP" alt="KSP"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.payngo.co.il/" target="_blank">
+                                <img src="תמונות/מחסני חשמל.png " title="מחסני חשמל" alt="מחסני חשמל"></a> </div>
+        </div>
+
+
+        <br>
+        <h2 id="section7">טיסות</h2>
+        <div class="b_center">
+                <div class="b_logo"> <a class="searchable-link" href="https://wizzair.com/#/" target="_blank">
+                                <img src="תמונות/וויז טיסות.png" title="וויז טיסות" alt="וויז טיסות"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.elal.com/he/Israel/Pages/default.aspx"
+                                target="_blank">
+                                <img src="תמונות/אל_על.png" title="אלעל טיסות" alt="אלעל טיסות"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.google.com/flights/?hl=he"
+                                target="_blank">
+                                <img src="תמונות/טיסות גוגל.png" title="גוגל טיסות" alt="גוגל טיסות"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.virginatlantic.com/" target="_blank">
+                                <img src="תמונות/חדש/200.png" title="Virgin Atlantic " alt="Virgin Atlantic "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://www.virginatlantic.com/PCCOciWeb/findBy"
+                                target="_blank">
+                                <img src="תמונות/חדש/129.png" title=" Virgin Atlantic ציק אין"
+                                        alt="  Virgin Atlantic ציק אין"> </a>
+                </div>
+
+        </div>
+
+
+        <br>
+        <h2 id="section8">אתרי מובייל</h2>
+
+        <div class="b_center">
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/7c4fT" target="_blank">
+                                <img src="תמונות/019 מובייל.png" title="מובייל 019" alt="מובייל 019"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.partner.co.il/" target="_blank">
+                                <img src="תמונות/פרטנר.png" title="פרטנר" alt="פרטנר"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://we-com.co.il/" target="_blank">
+                                <img src="תמונות/ויכום.png" title="ויקום מובייל" alt="ויקום מובייל"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.golantelecom.co.il/node/2"
+                                target="_blank">
+                                <img src="תמונות/גולן.png" title="גולן" alt="גולן"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.012mobile.co.il/n/login/"
+                                target="_blank">
+                                <img src="תמונות/012mobile.png" title="012 מובייל" alt="012 מובייל"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://cellcom.co.il/" target="_blank">
+                                <img src="תמונות/סלקום.png" title="סלקום" alt="סלקום"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://mobile.rami-levy.co.il/" target="_blank">
+                                <img src="תמונות/רמי_לוי_תקשורת.png" title="רמי לוי תקשורת" alt="רמי לוי תקשורת"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.pelephone.co.il/digitalsite/heb/home/"
+                                target="_blank">
+                                <img src="תמונות/פלאפון.png" title="מובייל פלאפון" alt="מובייל פלאפון"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.hotmobile.co.il/pages/default.aspx"
+                                target="_blank">
+                                <img src="תמונות/הוט מובייל.png" title="הוט מובייל" alt="הוט מובייל"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href=" https://my.simkehilot.co.il/" target="_blank">
+                                <img src="תמונות/סים קהילות.png" title=" חברת סים קהילות " alt=" חברת סים קהילות "> </a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://www.hotmobile.co.il/SelfService/Pages/DebtPayment.aspx" target="_blank">
+                                <img src="תמונות/חדש/147.png" title=" תשלום חוב הוט מובייל "
+                                        alt="תשלום חוב הוט מובייל  "> </a>
+                </div>
+
+        </div>
+
+
+        <br>
+        <h2 id="section9">מעקב משלוחים</h2>
+        <div class="b_center">
+                <div class="b_logo"> <a class="searchable-link" href="https://israelpost.co.il/" target="_blank">
+                                <img src="תמונות/דואר ישראל.png" title="דואר ישראל" alt=" דואר ישראל"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/4iM5q" target="_blank">
+                                <img src="תמונות/מעקב_דואר_ישראל.png" title="מעקב משלוחים דואר ישראל"
+                                        alt="מעקב משלוחים דואר ישראל"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://track.4px.com/query/LF044325796SG"
+                                target="_blank">
+                                <img src="תמונות/מעקב 4.png" title="מעקב 4 PX" alt="מעקב 4 PX"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.17track.net/en" target="_blank">
+                                <img src="תמונות/מעקב 17.png" title="מעקב 17" alt="מעקב 17"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://mydhl.express.dhl/il/he/tracking.html#/results?id=" target="_blank">
+                                <img src="תמונות/DHL.png" title="מעקב DHL" alt="מעקב DHL"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://global.cainiao.com/" target="_blank">
+                                <img src="תמונות/גלובל מעקב.png" title="מעקב משלוחים" alt="מעקב משלוחים"></a>
+                </div>
+        </div>
+
+
+
+        <br>
+        <h2 id="section10">אתרי בנק</h2>
+        <div class="b_center">
+                <div class="b_logo"> <a class="searchable-link" href="https://did.li/Hz9YH" target="_blank">
+                                <img src="תמונות/פועלים.png" title="פועלים" alt="פועלים"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://digital.isracard.co.il/" target="_blank">
+                                <img src="תמונות/ישראקארד.png" title="ישראקארד" alt="ישראקארד"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.mizrahi-tefahot.co.il/"
+                                target="_blank">
+                                <img src="תמונות/מזרחי טפחות.png" title="בנק מזרחי" alt="בנק מזרחי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.discountbank.co.il/DB/private"
+                                target="_blank">
+                                <img src="תמונות/דיסקונט.png" title="בנק דיסקונט" alt="בנק דיסקונט"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://online.pagi.co.il/" target="_blank">
+                                <img src="תמונות/בנק פאגי.png" title="בנק פאגי" alt="בנק פאגי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.paypal.com/il/home" target="_blank">
+                                <img src="תמונות/פייפל.png" title="פייפל" alt="פייפל"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.cal-online.co.il/" target="_blank">
+                                <img src="תמונות/ויזה כאל.png" title="וויזה כאל" alt="וויזה כאל"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.bank-yahav.co.il/" target="_blank">
+                                <img src="תמונות/בנק יהב.png" title="בנק יהב" alt="בנק יהב"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.bankhadoar.co.il/" target="_blank">
+                                <img src="תמונות/בנק הדואר.png" title="בנק הדואר" alt="בנק הדואר"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.bankjerusalem.co.il/" target="_blank">
+                                <img src="תמונות/בנק ירושלים.png" title="בנק ירושלים" alt="בנק ירושלים"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.leumi.co.il/" target="_blank">
+                                <img src="תמונות/בנק לאומי.png" title="בנק לאומי" alt="בנק לאומי"></a>
+                </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.max.co.il/" target="_blank">
+                                <img src="תמונות/מקס.png" title="מקס" alt="מקס"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link" href="https://www.payboxapp.com/" target="_blank">
+                                <img src="תמונות/חדש/149.png" title="פייבוקס" alt="פייבוקס"></a> </div>
+
+                <div class="b_logo"> <a class="searchable-link"
+                                href=" https://public.bankhapoalim.co.il/ng-portals/ma/he/create-meeting"
+                                target="_blank">
+                                <img src="תמונות/חדש/86.png" title=" זימון תור בנק הפועלים - פריט 88"
+                                        alt=" זימון תור בנק הפועלים"> </a>
+
+                </div>
+                <div class="b_logo"> <a class="searchable-link"
+                                href="https://www.leumi.co.il/Campaign/Saving_Kids/50213/ " target="_blank">
+                                <img src="תמונות/חדש/114.png" title=" בנק לאומי משיכת חיסכון "
+                                        alt=" בנק לאומי משיכת חיסכון "> </a>
+                </div>
+
+
+
+
+        </div>
+
+
+        <h2 id="section13">כתובות מיילים </h2>
+        <div class="b_center">
+
+
+
+
+
+
+
+                <div class="b_center" id="emailList"></div>
+
+
+
+
+
+
+
+                <!-- <h2 id="section13">כתובות מיילים </h2>
+              
+
+                <div class="b_logoo"> מענק לידה  
+                  <h5>example@example.com</h5>
+                <button onclick="copyEmail('example@example.com')">העתק  </button>
+        </div>
+
+        <div class="b_logoo"> מענק לידה  
+                      
+                <h5>@example.com</h5>
+              <button onclick="copyEmail('@example.com')">העתק  </button>
+      </div>
+
+      <div class="b_logoo"> מענק לידה  
+                      
+        <h5>example@example.</h5>
+      <button onclick="copyEmail('example@example.')">העתק  </button>
+</div> -->
+
+
+
+
+                <script>
+                        var emailGroups = [
+                                [
+                                        { name: "גמ'ח  אוהבי וחסד", email: "office@gmachoc.org" },
+                                        { name: "משביע לכל חי", email: "5606214@gmail.com" },
+                                        { name: " תלונות משרד התחבורה ", email: "pniotcrm@mot.gov.il" },
+                                        { name: "גמ'ח קופרמן", email: "office@gmachoc.org" },
+                                        { name: "בוני עולם", email: "212@boneiolam.co.il" },
+                                        { name: "מנוחה וישועה", email: "office.mcvy@gmail.com" },
+                                        { name: "הכנסת כלה בעזרי", email: "hk@bezri.org" },
+                                        { name: "בעזרי תמיכה חגים", email: "forms@bezri.org" },
+                                        { name: "תומכי שבת  ויו'ט", email: "tomcheshabos.eretzyisroel@gmail.com" },
+                                        { name: "עמותת לוי", email: "moked@lavy.org.il" },
+                                        { name: "פקס קופת העיר", email: "help@kupat.org" },
+                                        { name: "בנק לאומי", email: "expert.pc@bankleumi.co.il" },
+                                        { name: "מייל רבנות מבחנים הסמכה", email: "exams@marmanet.co.il" },
+                                        { name: "חברת פלאפון", email: "pelecall@pelephone.co.il" },
+                                        { name: "רשות המיסים בית שמש", email: "mashambetshemeshmail@taxes.gov.il" },
+                                        { name: "מענק עבודה", email: "maanak@taxes.gov.il" },
+                                        { name: "דוקטור שולד פיליפ", email: "shull012@gmail.com" },
+                                        { name: "הראל ביטוח בריאות", email: "polisotbs@harel-ins.co.il" },
+                                        { name: "הראל ביטוח חיים", email: "agafhaim@harel-ins.co.il" },
+                                        { name: "וויקי?", email: "viki.soryano@schindler.com" },
+                                        { name: "מנורה מבטחים", email: "sherut@menoramivt.co.il" },
+                                        { name: "גמ'ח צדקה וחסד", email: "ymk1980@gmail.com" },
+                                        { name: "שמש חדר מחשבים", email: "0722491@gmail.com" },
+                                        { name: "ישמח לב", email: "t1800800618@gmail.com" },
+                                        { name: "אגודת ישראל", email: "kav@agudat-i.org" },
+                                        { name: "אפרסמון בית שמש", email: "a9991546@gmail.com" },
+                                        { name: "עמותה בקשת אישור כולל", email: "ab029942542@gmail.com" },
+                                        { name: "משיכת כספים פנסיה מיטב", email: "gemel-p@meitav.co.il" },
+                                        { name: "יתד נאמן רשות הרבים", email: "a6170800@gmail.com" },
+
+                                        // קבוצה 1
+                                ],
+                                [
+
+                                        { name: "מייל ראשי", email: "mgar-alonim@mgar.co.il" },
+                                        { name: "ירושלים", email: "mgar14@mgar.co.il" },
+                                        { name: "בית שמש", email: "mgar20@mgar.co.il" },
+                                        { name: "ערד", email: "mgar34@mgar.co.il" },
+                                        { name: "בני ברק", email: "mgar32@mgar.co.il" },
+                                        { name: "אשדוד", email: "mgar29@mgrp.co.il" },
+                                        // קבוצה 2
+                                ],
+
+                                [
+
+                                        { name: "מייל ראשי", email: "2850@mgar.co.il" },
+                                        { name: "רותם", email: "mokedbs186@mgar.co.il" },
+                                        { name: "מירב", email: "mokedbs358@mgar.co.il" },
+                                        { name: "אספו", email: "mokedbs364@mgar.co.il" },
+                                        { name: "שירה", email: "mokedbs368@mgrp.co.il" },
+                                        { name: "מינדי", email: "mokedbs155@mgar.co.il" },
+                                        // קבוצה 3
+                                ],
+                                [
+
+                                        { name: "פסגות", email: "psagot@psagot.co.il" },
+                                        { name: "אלטשולר שחם", email: "sherut@altshul.co.il" },
+                                        { name: "הראל", email: "mfax@harel-ins.co.il" },
+                                        { name: "מור", email: "amitim@more.org.il" },
+                                        { name: "מיטב דש", email: "gemel-p@meitavdash.co.il" },
+                                        { name: "מגדל", email: "mokedge@migdal.co.il" },
+                                        { name: "מנורה", email: "pensia@menoramivt.co.il" },
+                                        { name: "בנק הפועלים", email: "SavingPlan@poalim.co.il" },
+                                        { name: "בנק מרכנתיל", email: "740private@mdb.co.il" },
+                                        // קבוצה 4
+                                ],
+                                // וכן הלאה עבור קבוצות נוספות
+                        ];
+
+                        var additionalWords = [" כללי   ", " אלונים סיעו בשכר דירה", " דירה בהנחה מחיר למשתכן", " משיכת חיסכון לכל ילד"];
+
+                        var emailListElement = document.getElementById("emailList");
+
+                        emailGroups.forEach(function (group, index) {
+                                var groupElement = document.createElement("div");
+                                groupElement.className = "email-group";
+
+                                // כותרת הקבוצה
+                                var titleElement = document.createElement("div");
+                                titleElement.className = "group-title";
+                                titleElement.innerText = additionalWords[index];
+                                groupElement.appendChild(titleElement);
+
+                                group.forEach(function (email) {
+                                        var divElement = document.createElement("div");
+                                        divElement.className = "email-box";
+
+                                        var nameElement = document.createElement("span");
+                                        nameElement.className = "email-name";
+                                        nameElement.innerText = email.name;
+                                        divElement.appendChild(nameElement);
+
+                                        var brElement1 = document.createElement("br");
+                                        divElement.appendChild(brElement1);
+
+                                        var emailElement = document.createElement("span");
+                                        emailElement.innerText = email.email;
+                                        divElement.appendChild(emailElement);
+
+                                        var brElement2 = document.createElement("br");
+                                        divElement.appendChild(brElement2);
+
+                                        var buttonElement = document.createElement("button");
+                                        buttonElement.innerText = "העתק";
+                                        buttonElement.addEventListener("click", function () {
+                                                copyEmail(email.email);
+                                        });
+                                        divElement.appendChild(buttonElement);
+                                        groupElement.appendChild(divElement);
+                                });
+
+                                emailListElement.appendChild(groupElement);
+                        });
+
+                        function copyEmail(email) {
+                                var tempInput = document.createElement("input");
+                                document.body.appendChild(tempInput);
+                                tempInput.setAttribute("value", email);
+                                tempInput.select();
+                                document.execCommand("copy");
+                                document.body.removeChild(tempInput);
+
+                                var alertMessage = document.createElement("div");
+                                alertMessage.classList.add("custom-alert");
+                                alertMessage.textContent = "כתובת האימייל הועתקה: " + email;
+                                document.body.appendChild(alertMessage);
+
+                                setTimeout(function () {
+                                        document.body.removeChild(alertMessage);
+                                }, 2000); // יעלה ההודעה למשך 2 שניות ואז תיעלם
+                        }
+                </script>
+
+        </div>
+        </main>
+
+        <footer>
+                <br>
+                <br>
+                <div> <a class="searchable-link" href="#top"><img src="תמונות/חץ למעלה2.png"
+                                        alt="לחץ עלי להגיע לראש הדף" title="לחץ עלי כדי להגיע לתפריט "></a>
+                </div>
+                <br>
+                <br>
+
+
+                <a class="searchable-link" href="mailto:M05567063@GMAIL.COM" id="section11" target="_blank">
+                        <img class="KREDIT" src="תמונות/משה חיים.gif" alt="קרדיט"
+                                title="לשליחת מייל לבעל האתר לחץ עלי"></a>
+
+                <br>
+                <br>
+
+                <form action="https://formspree.io/f/xzbqnwya" method="POST" class="contact-form">
+                        <h2 class="form-title">ליצירת קשר</h2>
+                        <div class="form-group">
+                                <label for="email"> אנא הכנס/י כאן אימייל:</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                        placeholder=" דוגמה example@example.com" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="message">הודעה:</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="אנא תרשום כאן"
+                                        required></textarea>
+                        </div>
+                        <!-- your other form fields go here -->
+                        <button type="submit" class="btn-submit">שליחה</button>
+                </form>
+                <br>
+                <br>
+
+                <!-- עד כאן זה הכפתור יצירת קשר -->
+
+
+                <!-- זה קוד בשביל כפתורים זזים -->
+
+                <!-- 
+                                      <div class="moving-buttons-container right">
+                                        <button class="moving-button">
+                                          <i class="fas fa-heart"></i>
+                                        </button>
+                                      </div>
+                                      
+                                      <div class="moving-buttons-container left">
+                                        <button class="moving-button">
+                                          <i class="fas fa-heart"></i>
+                                        </button>
+                                      </div> -->
+
+                <!-- עד כאן  -->
+
+
+
+
+
+
+                <!-- <br>
+    <div class="b_logo"> <a class="searchable-link"  href="http://www.shanim.co.il/?" target="_blank">clik-clik-clik-clik</a> </div>
+    <div class="b_logo"> <a class="searchable-link"  href="http://www.shanim.co.il/?" target="_blank">clik-clik-clik-clik</a>
+    <a class="searchable-link"  href="http://www.shanim.co.il/?" target="_blank">clik-clik-clik-clik</a>
+    <a class="searchable-link"  href="http://www.shanim.co.il/?" target="_blank">clik-clik-clik-clik</a>
+    <a class="searchable-link"  href="http://www.shanim.co.il/?" target="_blank">clik-clik-clik-clik</a> -->
+
+
+
+                <!-- 
+
+    <div class="b_logo"> <a class="searchable-link"  href="" target="_blank">
+        <img src="תמונות/.png" title="" alt=""></a> </div>
+
+        <div class="b_logo"> <a class="searchable-link"  href="" target="_blank">
+                <img src="תמונות/.png" title="" alt=""></a> </div> -->
+                <!-- 
+
+
+        <a class="searchable-link"  href="" target="_blank">
+            <img src="תמונות/ " title="" alt=""></a>
+
+                    <a class="searchable-link"  href="" target="_blank">
+                        <img src="תמונות/ " title="" alt=""></a> -->
+
+        </footer>
+
+        </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
